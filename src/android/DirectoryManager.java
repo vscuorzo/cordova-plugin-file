@@ -69,7 +69,7 @@ public class DirectoryManager {
             freeSpace = freeSpaceCalculation(Environment.getExternalStorageDirectory().getPath());
         }
         else if (checkInternal) {
-            freeSpace = freeSpaceCalculation("/");
+            freeSpace = freeSpaceCalculation(Environment.getRootDirectory().getAbsolutePath());
         }
         // If no SD card and we haven't been asked to check the internal directory then return -1
         else {
